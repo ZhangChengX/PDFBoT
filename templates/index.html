@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+	
+	
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOYEED /RUR Reader</title>
+	<script src="js/includeHTML.js"></script>
+	<style>
+	</style>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="js/outdatedbrowser/outdatedbrowser.min.css">    
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+	-->
+  </head>
+	
+	
+  <body>  
+    <div include-html="header.html"></div>
+	<!-- /header -->
+	  
+    <div class="container main-bg">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x" id="login">
+          <div class="large-8 medium-8 cell">
+			  
+			  <img src="images/color_books_2.jpg" alt="">
+            <div include-html="intro.html"></div>
+            
+			  
+			  <div class="contact-box">
+              <!--<h5><span lang="en">Contact</span><span lang="zh">联系</span></h5>-->
+              <span lang="en">DOOYEED /RUR Team</span><span lang="zh">得意读 研发团队</span><br><br><br>
+            </div>
+			  
+          </div>
+			
+          <div class="large-4 medium-4 cell">
+			  <fieldset class="large-5 cell switch-lang" id="switch-lang">
+              <input type="radio" name="lang" id="english" checked="checked"><label for="english">English</label>
+              <input type="radio" name="lang" id="chinese" ><label for="chinese">中文</label>
+            </fieldset>
+			  <!-- /language switch -->
+            <div class="login-box">
+              <h5><span lang="en">Login</span><span lang="zh">登录</span></h5>
+              <form id="login-form" action="/user/login" method="post">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button type="submit" class="button expanded" id="login-btn"><span lang="en">Login</span><span lang="zh">登录</span></button>
+                <a href="/user/register" class="button expanded"><span lang="en">Register</span><span lang="zh">注册</span></a>
+              </form>
+            </div>
+			  
+          </div>
+        </div> <!-- /login -->
+      </div>
+    </div> <!-- /container -->
+
+	<div include-html="footer.html"></div>
+	<div include-html="outdated_browser.html"></div>
+	<!-- /footer -->
+	  
+  	<script>
+      var lang = "en"; // zh for Chinese
+    </script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/jquery.form.min.js"></script>
+    <script src="js/docx/html-docx.js"></script>
+    <script src="js/docx/FileSaver.js"></script>
+    <script src="js/ckeditor/ckeditor.js"></script>
+    <script src="js/app.js"></script>
+    <!-- <script src="js/popup.js"></script> -->
+	<script>includeHTML();</script>
+  </body>
+</html>

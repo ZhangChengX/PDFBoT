@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOYEED - An Intelligent Reader</title>
+	<!-- <script src="js/includeHTML.js"></script> -->
+	<style>
+	</style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/foundation.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/app.css') }}">  
+    <!-- <link rel="stylesheet" href="js/outdatedbrowser/outdatedbrowser.min.css">     -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+	-->
+  </head>
+	
+  <body>
+    {% include 'header.html' %} <!-- /header -->
+
+    <div class="container main-bg">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+
+          <div id="qg-loading" class="cell large-12 text-center" style="font-size: 1.5em; margin: 20px 0;">
+            <i class="fas fa-sync fa-spin"></i> Computing... <br>
+            It may take a few minutes to process.
+          </div>
+
+          <div id="qg" class="cell large-12 qg hide">
+          </div>
+
+          <div id="qg-submit" class="cell large-12 hide">
+            <button type="button" class="button primary">Submit</button>
+          </div>
+
+          <div id="qg-summary"></div>
+
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+    {% include 'footer.html' %}
+
+    <script>
+      var lang = "en"; // zh for Chinese
+      var qg_page = "qg_sat";
+    </script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/foundation.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/qg.js') }}"></script>
+    <!-- <script src="js/popup.js"></script> -->
+  </body>
+</html>

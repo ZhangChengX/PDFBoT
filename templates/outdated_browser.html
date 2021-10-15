@@ -1,0 +1,41 @@
+<!-- Outdated Browser -->
+    <div id="outdated">
+        <!-- <h6>Your browser is out-of-date!</h6>
+        <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+        <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p> -->
+        <h6>您的浏览器已过时</h6>
+        <p>要正常浏览本网站请升级您的浏览器。<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/zh-cn">现在升级</a></p>
+        <p class="last"><button id="btnCloseUpdateBrowser" title="关闭" aria-label="关闭">&times;</button></p>
+    </div>
+	  
+	
+	  
+    <link rel="stylesheet" href="{{ url_for('static', filename='reader/js/outdatedbrowser/outdatedbrowser.min.css') }}"> 
+    <script src="{{ url_for('static', filename='reader/js/outdatedbrowser/outdatedbrowser.min.js') }}"></script>
+    <script>
+      // for outdatedbrowser, supports IE < 9
+      //event listener: DOM ready
+      function addLoadEvent(func) {
+          var oldonload = window.onload;
+          if (typeof window.onload != 'function') {
+              window.onload = func;
+          } else {
+              window.onload = function() {
+                  if (oldonload) {
+                      oldonload();
+                  }
+                  func();
+              }
+          }
+      }
+      //call function after DOM ready
+      addLoadEvent(function(){
+          outdatedBrowser({
+              bgColor: '#f25648',
+              color: '#ffffff',
+              lowerThan: 'transform',
+              languagePath: ''
+          })
+      });
+    </script>
+    <!-- /Outdated Browser -->

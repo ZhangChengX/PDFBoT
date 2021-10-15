@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>DOOYEED - An Intelligent Reader</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/foundation.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" >
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/fonts/line-icons.css') }}">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/slicknav.css') }}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/owl.theme.css') }}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/slick.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/slick-theme.css') }}" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/responsive.css') }}">
+
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="{{ url_for('index.index_page') }}" class="navbar-brand"><img src="{{ url_for('static', filename='assets/img/logo_210px.png') }}" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-left clearfix">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index.index_page') }}">
+					<span lang="en">Home</span><span lang="zh">首页</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index.index_page') }}#services">
+                  <span lang="en">About</span><span lang="zh">关于</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index.index_page') }}#feature">
+                  <span lang="en">Feature</span><span lang="zh">应用</span>
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="index.html#team">
+                  <span lang="en">Team</span><span lang="zh">团队</span>
+                </a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="index.html#testimonial">
+                  <span lang="en">Testimonial</span><span lang="zh">推荐</span>
+                </a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="index.html#pricing">
+                  <span lang="en">Pricing</span><span lang="zh">套餐</span>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index.index_page') }}#contact">
+                  <span lang="en">Contact</span><span lang="zh">联系</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('reader.sat_page') }}">
+                  <span lang="en">SAT</span><span lang="zh">SAT</span>
+                </a>
+              </li>
+				      <!-- <li class="nav-item">
+                <a class="nav-link" href="index.html#">
+                  <span lang="en">FAQ</span><span lang="zh">常见问题</span>
+                </a>
+              </li> -->
+				<li>
+			  	<fieldset id="switch-lang">
+              	<input type="radio" name="lang" id="english" checked="checked"><label for="english">English</label>
+			  	<input type="radio" name="lang" id="chinese" ><label for="chinese">中文</label>
+              	</fieldset>
+				</li>
+            </ul>
+            <div class="btn-sing float-right">
+              <a class="btn btn-border" href="{{ url_for('user.login') }}"><span lang="en">LOGIN</span><span lang="zh">登录</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="mobile-menu navbar-nav">
+			<li>
+			  <fieldset id="switch-lang">
+              <input type="hidden" name="lang" id="english" ><label for="english">English</label>
+			  <input type="hidden" name="lang" id="chinese" ><label for="chinese">中文</label>
+              </fieldset>
+			</li>
+          <li>
+            <a class="page-scroll" href="{{ url_for('index.index_page') }}#hero-area">
+              <span lang="en">Home</span><span lang="zh">首页</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="{{ url_for('index.index_page') }}#services">
+              <span lang="en">About</span><span lang="zh">关于</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="{{ url_for('index.index_page') }}#feature">
+              <span lang="en">Feature</span><span lang="zh">应用</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a class="page-scroll" href="index.html#team">
+              <span lang="en">Team</span><span lang="zh">团队</span>
+            </a>
+          </li> -->
+          <!-- <li>
+            <a class="page-scroll" href="index.html#testimonial">
+              <span lang="en">Testimonial</span><span lang="zh">推荐</span>
+            </a>
+          </li> -->
+          <!-- <li>
+            <a class="page-scroll" href="index.html#pricing">
+              <span lang="en">Pricing</span><span lang="zh">套餐</span>
+            </a>
+          </li> -->
+          <li>
+            <a class="page-scroll" href="{{ url_for('index.index_page') }}#contact">
+              <span lang="en">Contact</span><span lang="zh">联系</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="{{ url_for('reader.sat_page') }}">
+              <span lang="en">SAT</span><span lang="zh">SAT</span>
+            </a>
+          </li>
+			    <!--<li>
+            <a class="page-scroll" href="index.html#">
+              <span lang="en">FAQ</span><span lang="zh">常见问题</span>
+            </a>
+          </li>-->
+          <li>
+            <a class="btn btn-border" href="{{ url_for('user.login') }}"><span lang="en">LOGIN</span><span lang="zh">登录</span></a>
+          </li>
+        </ul>
+        <!-- Mobile Menu End -->
+
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      <div id="hero-area" class="hero-area-bg">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hero Area End -->
+
+    </header>
+    <!-- Header Area wrapper End -->
+
+    <!-- Demo Section Start -->
+    <section id="sat" class="section-padding">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-2">
+            <ul class="tabs vertical" data-tabs id="sat-tabs">
+              <!-- <li class="tabs-title is-active"><a href="#panel1-1" aria-selected="true">Test 1-1</a></li> -->
+              {% for k, v in data.items() %}
+              <li class="tabs-title {% if k == 'sat-01-01' %}is-active{% endif %}"><a data-tabs-target="panel-{{k}}" href="#panel-{{k}}">Test {{k[4:]}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="cell medium-10">
+            <div class="tabs-content" data-tabs-content="sat-tabs">
+
+              {% for k, v in data.items() %}
+              <div class="tabs-panel {% if k == 'sat-01-01' %}is-active{% endif %}" id="panel-{{k}}">
+                <h5>Passage:</h5>
+                <div class="passage">
+                  {{ v | safe }}
+                </div>
+                <div class="sat-learn-btn-wrapper">
+                  <a href="{{ url_for('reader.rur') }}#!/{{k}}" class="button primary sat-learn-btn"><span lang="en">Learn</span><span lang="zh">学习</span></a>
+                </div>
+              </div> <!-- tabs-panel -->
+              {% endfor %}
+
+            </div><!-- tabs-content -->
+          </div><!-- cell -->
+        </div><!-- grid-x -->
+      </div><!-- /grid-container -->
+    </section>
+    <style>
+      section#sat {margin-top:60px;}
+      section#sat div p {margin:10px 0;}
+      section#sat .tabs-content {border-top:1px solid #e6e6e6;}
+    </style>
+    <!-- Demo Section End -->
+
+
+
+	  <!-- Footer Section Start -->
+    <footer id="footer" class="footer-area section-padding">
+      <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="footer-logo mb-3">
+                <img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="">
+              </div>
+              <p><span lang="en">A computer assisted reading tool to help users achieve a more effective style of reading for understanding. </span><span lang="zh">基于文本的人工智能辅助阅读工具，帮助用户实现更有效地进行理解阅读。</span></p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
+				<h3 class="footer-titel"><span lang="en">Company</span><span lang="zh">企业</span></h3>
+              <ul>
+				  <li><a href="#"><span lang="en">Press Releases</span><span lang="zh">新闻</span></a></li>
+				  <li><a href="#"><span lang="en">Mission</span><span lang="zh">任务</span></a></li>
+				  <li><a href="#"><span lang="en">Strategy</span><span lang="zh">战略</span></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+              <h3 class="footer-titel"><span lang="en">About</span><span lang="zh">关于</span></h3>
+              <ul>
+                <li><a href="#"><span lang="en">Career</span><span lang="zh">从业</span></a></li>
+                <li><a href="#"><span lang="en">Team</span><span lang="zh">团队</span></a></li>
+				  <li><a href="#"><span lang="en">Clients</span><span lang="zh">客户</span></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.8s">
+				<h3 class="footer-titel"><span lang="en">Find us on</span><span lang="zh">社交媒体</span></h3>
+              <div class="social-icon">
+  	            <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+  	            <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+  	            <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+  	            <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>     
+    </footer> 
+    <!-- Footer Section End -->
+	  
+	<script>
+      var lang = "en"; // zh for Chinese
+    </script>
+
+    <section id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Copyright © 2018-Present DOOYEED INC., All Right Reserved | (US Patent pending, No. 62/713,lll)</p>
+          </div>
+        </div>
+      </div>
+    </section>   
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+    	<i class="lni-arrow-up"></i>
+    </a>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->	  
+    <script src="{{ url_for('static', filename='assets/js/jquery-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/scrolling-nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.slicknav.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/contact-form-script.min.js') }}"></script>
+	
+    <!-- <script src="{{ url_for('static', filename='assets/js/map.js') }}"></script> -->
+    <!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"></script> -->
+	
+  <script src="{{ url_for('static', filename='assets/js/vendor/what-input.js') }}"></script>
+	<script src="{{ url_for('static', filename='assets/js/vendor/foundation.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+	
+      
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOYEED - An Intelligent Reader</title>
+  	<!-- <script src="{{ url_for('static', filename='reader/js/includeHTML.js') }}"></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/app.css') }}">   
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
+  </head>
+  
+	
+  <body>
+    {% include 'header.html' %} <!-- /header -->
+
+    <div class="container main-bg">
+      <div class="grid-container">
+
+        <div id="request">
+
+          <div class="grid-x grid-padding-x step1">
+            <div class="large-3 cell">
+              <span lang="en">Step 1</span><span lang="zh">第1步</span> <br>
+              <span class="desc"><span lang="en">Choose Document Language</span><span lang="zh">选择文本语言</span></span>
+            </div>
+            <div class="large-9 cell">
+              <fieldset class="large-5 cell switch-lang" id="switch-lang">
+                <input type="radio" name="lang" id="english" checked="checked"><label for="english">English</label>
+                <input type="radio" name="lang" id="chinese" ><label for="chinese">中文</label>
+              </fieldset>
+              <!-- <div class="switch large">
+                <input class="switch-input" id="switch-lang" type="checkbox" name="lang">
+                <label class="switch-paddle" for="switch-lang">
+                  <span class="show-for-sr">Language</span>
+                  <span class="switch-active" aria-hidden="true">English</span>
+                  <span class="switch-inactive" aria-hidden="true">中文</span>
+                </label>
+              </div> -->
+            </div>
+          </div><!-- /step1 -->
+
+          <div class="grid-x grid-padding-x step2">
+            <div class="large-3 cell">
+              <span lang="en">Step 2</span><span lang="zh">第2步</span>  <br>
+              <span class="desc"><span lang="en">Upload file or paste text</span><span lang="zh">上传文档或复制粘贴文字</span>
+            </div>
+            <div class="large-4 cell">
+              <div class="file-upload-wrapper">
+                <form method="post" action="" enctype="multipart/form-data">
+                  <div class="input-group">
+                    <label for="file-upload" class="button hollow secondary expanded input-group-field file-upload"><span lang="en">Upload DOCX/PDF/TXT<br><br>(PDF: Currently supports only PDF files<br> generated in the standard format)</span><span lang="zh">上传 DOCX/PDF/TXT<br><br>(PDF：目前只支持按标准格式生成的 PDF 文件)</span></label>
+                    <input type="file" id="file-upload" class="show-for-sr" name="text-file">
+                  </div>
+                </form>
+                <div class="progress hide">
+                  <div class="bar"></div >
+                  <div class="percent">0%</div >
+                </div>
+                <div class="multi-column">
+                  <input type="checkbox" id="multi-column">
+                  <label for="multi-column"><span lang="en">Two-column PDF</span><span lang="zh">双列PDF</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="large-1 cell text-center center-or">
+              - <span lang="en">or</span><span lang="zh">或</span> -
+            </div>
+            <div class="large-4 cell">
+              <textarea class="text" placeholder="Paste your text"></textarea>
+            </div>
+          </div><!-- /step2 -->
+
+          <div class="grid-x grid-padding-x step3">
+            <div class="large-3 cell">
+              <span lang="en">Step 3</span><span lang="zh">第3步</span>  <br>
+              <span class="desc">
+                <span lang="en">Type in a percentage. <br>The default percentage is 10% each time, displaying layers of contents in descending order of importance marked by different colors.</span>
+                <span lang="zh">输入阅读比例。<br>默认百分比按10%递增，重点从高到低，每层用不同颜色显示。</span>
+              </span>
+            </div>
+            <div class="large-4 cell">
+              <div class="input-group">
+                <input class="input-group-field ratio" type="number" step="10" min="10" max="100" value="10">
+                <span class="input-group-label">%</span>
+              </div>
+              <!-- <select class="ratio">
+                <option value="10" selected="selected">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+                <option value="40">40%</option>
+                <option value="50">50%</option>
+                <option value="60">60%</option>
+                <option value="70">70%</option>
+                <option value="80">80%</option>
+                <option value="90">90%</option>
+                <option value="100">100%</option>
+              </select> -->
+            </div>
+            <div class="large-5 cell"></div>
+            <!-- <div class="large-1 cell text-center center-or">
+              - <span lang="en">or</span><span lang="zh">或</span> -
+            </div>
+            <div class="large-4 cell">
+              <input class="input-group-field numberofsentences" type="number" step="1" min="0" value="" placeholder="Read by the number of sentences">
+            </div> -->
+          </div><!-- /step3 -->
+
+          <div class="grid-x grid-padding-x step4">
+            <div class="large-3 cell">
+              <span lang="en">Step 4</span><span lang="zh">第4步</span>  <br>
+              <span class="desc"><span lang="en">Select an appropriate type for your article to submit.</span><span lang="zh">选择适当的文本按钮提交。</span></span>
+            </div>
+            <!-- <div class="large-4 cell"> -->
+            <div class="large-9 cell">
+              <!-- <button type="button" class="button expanded" id="submit-btn1"><span lang="en">Submit (Fast version)</span><span lang="zh">提交 (极速版)</span></button> -->
+              <!-- <button type="button" class="button expanded" id="submit-btn2"><span lang="en">Submit (Enhanced version, slower)</span><span lang="zh">提交 (加强版 稍慢)</span></button> -->
+              <div class="grid-x grid-padding-x">
+                <div class="large-3 cell">
+                  <button type="button" class="button expanded" id="submit-btn2"><span lang="en">Narration</span><span lang="zh">记叙文</span></button>
+                </div>
+                <div class="large-3 cell">
+                  <button type="button" class="button expanded" id="submit-btn3"><span lang="en">Argumentation</span><span lang="zh">议论文</span></button>
+                </div>
+                <div class="large-3 cell">
+                  <button type="button" class="button expanded" id="submit-btn4"><span lang="en">Research</span><span lang="zh">学术研究</span></button>
+                </div>
+                <div class="large-3 cell">
+                  <button type="button" class="button expanded" id="submit-btn1"><span lang="en">News</span><span lang="zh">新闻</span></button>
+                </div>
+              </div>
+              <button type="button" class="button expanded hide" id="processing-btn"> 
+                <i class="fas fa-sync fa-spin"></i> <span lang="en">Processing...</span><span lang="zh">正在处理中...</span>
+              </button>
+            </div>
+            <!-- <div class="large-5 cell">
+            </div> -->
+          </div><!-- /step4 -->
+
+        </div> <!-- /request -->
+        
+        <!-- page break -->
+
+        <div class="grid-x grid-padding-x align-center hide" id="reading">
+
+          <!-- <div class="large-12 medium-12 small-12 cell">
+            <button type="button" class="button return-btn" id="return-btn"><< <span lang="en">Return</span><span lang="zh">返回</span></button>
+            <button type="button" class="button restart-btn" id="restart-btn"><i class="fas fa-redo"></i> <span lang="en">Restart</span><span lang="zh">重读</span></button>
+          </div> -->
+
+          <div class="large-9 medium-9 small-12 cell">
+            <!-- reading container -->
+            <div class="callout" id="reading-area">
+            </div>
+
+            <div><br></div>
+
+            <button type="button" class="button expanded" id="read-more"><span lang="en">Read 10% more</span><span lang="zh">再读10%</span></button>
+
+            <h4>Exercise</h4>
+            <a id="qg" href=""><span lang="en">Questions generated by Dooyeed</span><span lang="zh">问题生成</span></a>
+            <br>
+            <a id="qg-sat" href="">
+              <span lang="en">Questions provided by SAT</span><!-- <span lang="zh">测试你的阅读理解 >></span> --><br>
+            </a>
+            
+            <a id="qg-summary" href=""><span lang="en">Write a summary</span><span lang="zh">写一段摘要</span></a>
+          </div>
+
+          <div class="large-3 medium-3 small-12 cell">
+            
+            <div class="grid-x">
+            <button type="button" class="button return-btn" id="return-btn"><< <span lang="en">Return</span><span lang="zh">返回</span></button>
+            <button type="button" class="button restart-btn" id="restart-btn"><i class="fas fa-redo"></i> <span lang="en">Restart</span><span lang="zh">重读</span></button>
+            </div>
+
+            <div class="input-group">
+              <input class="input-group-field ratio" type="number" step="10" min="0" max="100" value="10">
+              <span class="input-group-label">%</span>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field numberofsentences" type="number" step="1" min="0" value="" placeholder="Read by the number of sentences">
+            </div>
+            <!-- <select class="ratio">
+              <option value="10">10%</option>
+              <option value="20">20%</option>
+              <option value="30">30%</option>
+              <option value="40">40%</option>
+              <option value="50">50%</option>
+              <option value="60">60%</option>
+              <option value="70">70%</option>
+              <option value="80">80%</option>
+              <option value="90">90%</option>
+              <option value="100">100%</option>
+            </select> -->
+
+            <div id="heat-map" class="heat-map">
+              <div> 10% <span class="font-color-0">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 20% <span class="font-color-1">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 30% <span class="font-color-2">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 40% <span class="font-color-3">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 50% <span class="font-color-4">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 60% <span class="font-color-5">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 70% <span class="font-color-6">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 80% <span class="font-color-7">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 90% <span class="font-color-8">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+              <div> 100% <span class="font-color-9">&#9724;&#9724;&#9724;&#9724;&#9724;&#9724;</span></div>
+            </div>
+
+            <div id="title-list" class="title-list">
+              <div><span lang="en">Title</span><span lang="zh">标题列表</span>:</div>
+              <ul>
+                <!-- 
+                <li><a href="#">aaa</a></li>
+                <li><a href="#">bbb</a></li>
+                <li><a href="#">ccc</a></li> 
+                -->
+              </ul>
+            </div>
+
+            <div id="keyword-list" class="keyword-list">
+              <div><span lang="en">Keyword</span><span lang="zh">关键字</span>:</div>
+              <span class="keyword-box"></span>
+            </div>
+
+          </div>
+
+        </div> <!-- /reading -->
+
+      </div>
+    </div> <!-- /container -->
+
+    {% include 'footer.html' %}
+
+	<!-- /footer -->
+
+    <script>
+      var lang = "en"; // zh for Chinese
+    </script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/foundation.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/jquery.form.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/docx/html-docx.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/docx/FileSaver.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/app.js') }}?0427"></script>
+    <!-- <script src="js/popup.js"></script> -->
+    <!-- <script>includeHTML();</script> -->
+    {# include 'outdated_browser.html' #}
+  </body>
+</html>

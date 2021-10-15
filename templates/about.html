@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOYEED - An Intelligent Reader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/app.css') }}">   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+	-->
+  </head>
+	
+  <body>
+    {% include 'header.html' %}
+	<!-- /header -->
+
+    <div class="container main-bg">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+          <div class="large-8 medium-8 cell">
+            <h5><span lang="en">Dooyeed: An Automated Tool to Facilitate Reading for Understanding <br> (US Patent pending, No. 62/713,lll)</span>
+              <span lang="zh">得意读 智能辅助阅读器简要说明</span></h5>
+            <img src="{{ url_for('static', filename='reader/images/readforunderstanding.jpg') }}">
+            <br>
+            <span lang="en">
+            <p>We read for three purposes: (1) Read for entertainment, such as reading a fiction and a novel. (2) Read for information, such as reading twits and headline news. (3) Read for understanding, such as reading an essay or an academic paper. The purposes of these readings may often overlap, and reading for understanding is the most sophisticated form, which plays a major role for humans to acquire knowledge presented in printed materials. </p>
+
+<p>We believe that the best approach to reading for understanding is to read the central ideas first by reading the most critical part of a document, and then gradually expanding coverage in descending order of importance into the entire document. However, reading documents following the order that sentences are presented has been the dominant way of reading for thousands of years, because it is impossible to know which part is important until one has read the whole document.</p>
+
+<p>We fill this gap by inventing and developing Dooyeed, a software tool that uses natural language processing, intelligent text management and text mining algorithms, and optimization techniques to accurately and automatically identify and highlight blocks of a document in descending order of importance to facilitate reading for understanding, where a block consists of sentences that may or may not be consecutive in the original document. In so doing, Dooyeed allows users to concentrate on reading the most important block of contents, then move on to the next important block with the previous blocks of sentences in the original order of the document, and continue reading in this fashion until the entire document or a certain layer of blocks is read. </p>
+
+<p>The core idea of this technology can be described as follows: On a given text document, it first ranks each sentence based on syntactic and semantic relations between words, the topics contained in the document, and the structure of the document. It then extracts sentences according to distributions of salient scores and topics to form blocks of sentences, and maximizes the content coverage and diversity of each block. </p>
+
+<p>Users may determine how large a block or a number of sentences at each layer would best match their reading capability. For example, the first-layer block may consist of 10% of the sentences of the entire document, the second-layer 30%, the third-layer 60%, and the last layer the entire document. Dooyeed also provides default options on the number of layers and the block size at each layer. </p>
+
+<p>Each new block of sentences is displayed with a clear visual effect from previous blocks. We may imagine that each block is a subsurface lifted in the third dimension with a certain height, such that the most critical block is at the highest layer, the least important block is at the lowest, and the rest of the blocks are at different layers according to their importance levels. To implement this idea on a 2D computer screen, we use different colors to represent different layers, similar to contour lines in a topographic map.</p>
+
+<p>In addition to stripping a document down to different layers of importance, Dooyeed can also help test if the reader has gained a certain level of comprehension of the document by asking the reader a set of questions that are generated and graded automatically based on the contents of the document. </p>
+
+            </span>
+            <span lang="zh">
+              <p>人们阅读的目的有以下3个层面：1、娱乐性阅读（reading for entertainment），这是为娱乐进行的阅读，比如阅读小说、诗歌等。2、信息性阅读（reading for information），这是为获取信息进行的阅读，比如阅读报纸、杂志等。3、理解性阅读（reading for enlightenment, reading for understanding） ，这是为获取新知识和新感悟进行的阅读，比如阅读教科书、学术论文等。</p>
+              <p>理解性阅读是阅读的最高层面，是人类文明承传的主要方式。</p>
+<p>我们认为：实现理解性阅读的一个高效和快捷的方式是首先阅读文中最重要的内容，然后按内容的重要性分层次、依次从高到低阅读各层次的文字，直到阅读完整篇文章或读到某一层次为止。</p>
+ <p>我们还认为：按照文章的自然顺序阅读，尽管是几千年来延续下来的传统的阅读方式，但对理解性阅读却是低效的。在本发明以前，按照文章自然顺序阅读是人们普遍遵循的阅读方式。原因是人们在阅读一篇从未读过的文章之前无法知道哪些内容最重要、哪些内容次重要、及哪些内容可以略过不读而不会影响掌握文章表达的主要思想和事实。</p>
+    <p>现代科技将人们的阅读习惯从静态的纸质读物快速过渡到动态的电子读物，使变革传统的理解性阅读方式成为可能。</p>    
+    <p>RUR 理解性阅读器（Reading-for-Understanding Reader）正是为了革新传统的阅读方式而发明的智能辅助阅读工具，旨在给读者提供一个高效的理解性阅读的全新体验。RUR 理解性阅读器结合文本挖掘和人工智能技术，核心思想如下： 给定一篇文本，比如一篇论文或一章书，首先用计算机计算文章中每个句子的重要性分数，然后按句子分数从高到低抽取一定比例的句子做成若干文本区域，使得第1块区域中的每个句子的分数比其他区域的句子分数高，第2块区域中的每个句子的分数比剩下的其他区域中的每个句子的分数高，如此类推将所有区域排序。每快区域中的句子仍按原文的句子顺序排列，这些句子也不一定是在原文中连续出现的。</p>
+    <p>阅读首先从第1块区域开始，这是全文的重中之重，然后按区块顺序依次加入一块新区域，按原文句子顺序嵌入到已经阅读过的区块中，直到阅读完整篇文章或按读者需求只需读到某层次的区域即可。阅读每一块新区域的作用是充实已经阅读过的区域。</p>
+    <p>为了区分各区域，我们可想象整篇文章是一个大平面，而每块区域是从这个平面提升到空间中某个高度的文字子平面，使得最重要的区块的层次最高，最不重要的区块在最底层，其余区块按其重要性依次在空间中占据不同层次。每个层次的文字是一组句子，按在文章的出现的次序排列。在平面显示的时候我们用不同的颜色代表不同的层次，类似地形图中等高线的表示方式。 </p>
+    <p>实现 RUR需要快速、准确地计算每个句子的重要性分数。RUR Read的研发团队在这方面的研究成果在精度和速度方面世界领先。比如，我们用标注数据集SummBank做比较得出，我们的算法的精度超出每位专家的个体智能，并可与专家群体智能水平媲美。</p>
+            </span>
+          </div>
+          <div class="large-4 medium-4 cell">
+            <fieldset class="large-5 cell switch-lang" id="switch-lang">
+              <input type="radio" name="lang" id="english" checked="checked"><label for="english">English</label>
+              <input type="radio" name="lang" id="chinese" ><label for="chinese">中文</label>
+            </fieldset>
+            <div class="login-box">
+              <h5><span lang="en">Login</span><span lang="zh">登录</span></h5>
+              <form id="login-form" action="/user/login" method="post">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button type="submit" class="button expanded" id="login-btn"><span lang="en">Login</span><span lang="zh">登录</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+   	{% include 'footer.html' %}
+	<!-- /footer -->
+	  
+  	<script>
+      var lang = "en"; // zh for Chinese
+    </script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/foundation.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/jquery.form.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/docx/html-docx.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/docx/FileSaver.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/app.js') }}"></script>
+    <!-- <script src="js/popup.js"></script> -->
+    <!-- <script>includeHTML();</script> -->
+    {% include 'outdated_browser.html' %}
+  </body>
+</html>

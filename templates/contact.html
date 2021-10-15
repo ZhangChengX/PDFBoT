@@ -1,0 +1,153 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOYEED - An Intelligent Reader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reader/css/app.css') }}">   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+	-->
+  </head>
+	
+  <body>
+    {% include 'header.html' %}
+	<!-- /header -->
+
+    <div class="container main-bg">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+			
+			
+			
+			
+          <!--<div class="large-8 medium-8 cell">
+            <h5><span lang="en">Contact</span>
+              <span lang="zh">联系我们</span></h5>
+            <span lang="en">RUR R&D Team</span><span lang="zh">RUR 研发团队</span><br>
+              Email: rurresearch@gmail.com<br>
+            <img src="images/img4.jpg">
+          </div>-->
+          <div class="large-4 medium-4 cell">
+            <fieldset class="large-5 cell switch-lang" id="switch-lang">
+              <input type="radio" name="lang" id="english" checked="checked"><label for="english">English</label>
+              <input type="radio" name="lang" id="chinese" ><label for="chinese">中文</label>
+            </fieldset>
+			  
+			  
+			  
+            <!--<div class="login-box">
+              <h5><span lang="en">Login</span><span lang="zh">登录</span></h5>
+              <form id="login-form" action="/user/login" method="post">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button type="submit" class="button expanded" id="login-btn"><span lang="en">Login</span><span lang="zh">登录</span></button>
+              </form>
+            </div>-->
+          </div>
+			
+        </div>
+		  
+	<section id="contact">    
+      <div>
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header text-center">
+              <h2><span lang="en">Contact</span><span lang="zh">联系</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
+          
+            <div class="contact-block">
+              <h5><span lang="en">Contact Us</span><span lang="zh">联系我们</span></h5>
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
+                      <div class="help-block with-errors"></div>
+                    </div>                                 
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                      <div class="help-block with-errors"></div>
+                    </div> 
+                  </div>
+                   <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group"> 
+                      <textarea class="form-control" id="message" placeholder="Your Message" rows="5" data-error="Write your message" required></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="button expanded">
+						<button id="form-submit" type="submit"><span lang="en">Send Message</span><span lang="zh">发送</span></button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div> 
+                      <div class="clearfix"></div> 
+                    </div>
+                  </div>
+                </div>            
+              </form>
+            </div>
+          
+          
+            
+              <!--<h2>Get In Touch</h2>
+              <div class="contact-right">
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-map-marker"></i>
+                  </div>
+                  <p>Boston, Massachusetts</p>
+                </div>
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-envelope"></i>
+                  </div>
+                  <p><a href="#">info@dooyeed.com</a></p>
+                  <p><a href="#">rurresearch@gmail.com</a></p>
+                </div>
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-phone-handset"></i>
+                  </div>
+                  <p><a href="#">+1 800 975 3660</a></p>
+                </div>
+              </div>-->
+            
+          
+        </div>
+      </div> 
+    </section>
+      </div>
+		
+    </div> <!-- /container -->
+
+    {% include 'footer.html' %}
+	<!-- /footer -->
+	
+    <script>
+      var lang = "en"; // zh for Chinese
+    </script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/foundation.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/vendor/jquery.form.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/docx/html-docx.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/docx/FileSaver.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ url_for('static', filename='reader/js/app.js') }}"></script>
+    <!-- <script src="js/popup.js"></script> -->
+    <!-- <script>includeHTML();</script> -->
+    {% include 'outdated_browser.html' %}
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOYEED - An Intelligent Reader</title>
+  	<!-- <script src="{{ url_for('static', filename='reader/js/includeHTML.js') }}"></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+    {% include 'header.html' %} <!-- /header -->
+
+    <div class="container main-bg">
+      <div class="grid-container">
+
+        <div id="request">
+
+
+          <div class="grid-x grid-padding-x step2">
+
+            <div class="large-4 cell">
+              <div class="file-upload-wrapper">
+
+                <h2>Select a file to upload</h2>
+                    <p>
+                      {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                          <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                      {% endwith %}
+                    </p>
+                    <form method="post" action="/upload_file" enctype="multipart/form-data">
+                        <dl>
+                        <p>
+                          <input type="file" name="file" autocomplete="off" required>
+                        </p>
+                        </dl>
+                        <p>
+                        <input type="submit" value="Submit">
+                      </p>
+                    </form>
+
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </div> <!-- /container -->
+
+    {% include 'footer.html' %}
+
+	<!-- /footer -->
+
+    <script>
+      var lang = "en"; // zh for Chinese
+    </script>
+    <script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/foundation.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/jquery.form.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/docx/html-docx.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/docx/FileSaver.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}?0427"></script>
+    <!-- <script src="js/popup.js"></script> -->
+    <!-- <script>includeHTML();</script> -->
+    {# include 'outdated_browser.html' #}
+  </body>
+</html>
