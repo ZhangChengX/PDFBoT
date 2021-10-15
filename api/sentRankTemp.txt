@@ -1,0 +1,52 @@
+[
+  [
+    0,
+    "Republicans by double-digit margins said they are willing to ditch their party to follow former President Donald Trump​ if he breaks out on his own,  according to a new poll released Sunday.",
+    1
+  ],
+  [
+    1,
+    "Members of the GOP by 46 percent to 27 percent said they would put the Republican Party in the rear-view mirror if Trump creates his own,  a USA Today/Suffolk University poll found.​",
+    3
+  ],
+  [
+    2,
+    "\"We feel like Republicans don't fight enough for us,  and we all see Donald Trump fighting for us as hard as he can,  every single day, \" Brandon Keidl,  27,  a Republican and small-business owner from Milwaukee,  ​told the pollsters.",
+    2
+  ],
+  [
+    3,
+    "\"But then you have establishment Republicans who just agree with establishment Democrats and everything,  and they don't ever push back, \" he said.",
+    4
+  ],
+  [
+    4,
+    "Half of those surveyed said they think the Republican Party should be \"more loyal to Trump\" — even if that means losing the support of those in the GOP establishment​.",
+    7
+  ],
+  [
+    5,
+    "Nineteen percent said the party should pull away from Trump.",
+    6
+  ],
+  [
+    6,
+    "The survey showed that Trump's support remains strong since he was acquitted in a Senate impeachment trial for stirring up his supporters to march on the Capitol Jan. 6.",
+    9
+  ],
+  [
+    7,
+    "Trump will deliver the keynote address at the Conservative Political Action Conference in Orlando on Feb. 28.",
+    10
+  ],
+  [
+    8,
+    "He will speak on the \"the future of the Republican Party and the conservative movement.\"",
+    8
+  ],
+  [
+    9,
+    "Trump,  who has been hosting Republican lawmakers at his Mar-a-Lago Florida resort since President Biden was inaugurated on Jan. 20,  has vowed to retaliate against GOP congressional members who didn't support him during the impeachment hearings.",
+    5
+  ]
+]
