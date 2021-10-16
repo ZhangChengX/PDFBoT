@@ -13,8 +13,8 @@ Dependencies
 * flask
 
 ## Usage
-Command to run PDFBoT API
+Command to run PDFBoT API on local computer
 ```
 python3 main.py
 ```
-Once the builtin server is launched, head over to [http://127.0.0.1:5000/](http://127.0.0.1:5000/). 
+Once the builtin server is launched, head over to [http://127.0.0.1:5000/](http://127.0.0.1:5000/). Follow the instrucation to upload PDF file to extract text. 
